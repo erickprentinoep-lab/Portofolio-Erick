@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Erick EP-LAB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;700;900&family=Space+Mono&display=swap"
+        rel="stylesheet">
+  <script type="module" crossorigin src="/assets/main-Bgd3E047.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-zpTPDa6T.css">
+</head>
+
+<body class="bg-background text-white font-sans selection:bg-primary selection:text-background overflow-x-hidden">
+    <div id="app">
+        <div id="cursor"
+            class="fixed w-4 h-4 bg-primary rounded-full pointer-events-none z-[9999] mix-blend-difference hidden lg:block">
+        </div>
+        <div id="cursor-blur"
+            class="fixed w-24 h-24 bg-primary/20 rounded-full blur-3xl pointer-events-none z-[9998] hidden lg:block">
+        </div>
+
+        <nav id="navbar" class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[min(90%,500px)]">
+            <div
+                class="bg-surface/50 backdrop-blur-xl px-6 py-3 rounded-2xl border border-white/10 flex justify-between items-center shadow-2xl">
+                <a href="/" class="font-display font-black text-lg tracking-tighter text-primary">EP<span
+                        class="text-white">.</span></a>
+                <ul class="flex gap-6 text-[10px] font-bold uppercase tracking-widest text-white/50">
+                    <li><a href="/" class="hover:text-primary transition-colors">Home</a></li>
+                    <li><a href="/about.html" class="text-primary tracking-tighter">About</a></li>
+                    <li><a href="/projects.html" class="hover:text-primary transition-colors">Works</a></li>
+                    <li><a href="/contact.html" class="hover:text-primary transition-colors">Sync</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="pt-32">
+            <section id="about" class="py-20 relative overflow-hidden">
+                <div class="container mx-auto px-6">
+                    <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+                        <div class="max-w-xl">
+                            <span
+                                class="text-primary font-mono text-xs uppercase tracking-widest mb-4 block">01_BIOGRAPHY</span>
+                            <h2 class="font-display font-black text-4xl md:text-6xl uppercase leading-none">Blending
+                                <br /> <span class="text-white/20">Digital Worlds.</span></h2>
+                        </div>
+                        <p class="max-w-xs text-white/40 text-sm font-light leading-relaxed">Infrastructure stability
+                            meets user experience elegance.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-auto md:h-[600px]">
+                        <div
+                            class="md:col-span-2 md:row-span-2 glass-card p-8 flex flex-col justify-end group overflow-hidden relative">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60 z-10">
+                            </div>
+                            <div
+                                class="absolute inset-0 z-0 opacity-20 group-hover:scale-110 transition-transform duration-700">
+                                <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                    <path d="M0,50 Q25,30 50,50 T100,50" stroke="#00f5ff" fill="none"
+                                        stroke-width="0.1" />
+                                </svg>
+                            </div>
+                            <div class="relative z-20">
+                                <h3 class="text-3xl font-display font-black mb-4">Infrastructure <br /> Specialist</h3>
+                                <p class="text-white/60 text-sm mb-6">Expertise in Cisco, Mikrotik, and enterprise-scale
+                                    network architecture.</p>
+                                <div class="flex gap-2">
+                                    <span
+                                        class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px]">CISCO_CCNA</span>
+                                    <span
+                                        class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px]">MTCRE</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="md:col-span-2 glass-card p-8 flex flex-col justify-between group">
+                            <h3 class="text-xl font-display font-bold">Front-End Visionary</h3>
+                            <p class="text-white/50 text-xs">Crafting pixel-perfect interfaces with React, Tailwind, and
+                                GSAP.</p>
+                        </div>
+                        <div class="glass-card p-6 flex flex-col items-center justify-center text-center">
+                            <span class="text-4xl font-display font-black text-primary mb-2">50+</span>
+                            <span class="text-[10px] text-white/40">Nodes</span>
+                        </div>
+                        <div class="glass-card p-6 flex flex-col items-center justify-center text-center">
+                            <span class="text-4xl font-display font-black text-secondary mb-2">12+</span>
+                            <span class="text-[10px] text-white/40">Projects</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="py-20 bg-surface/30">
+                <div class="container mx-auto px-6">
+                    <h2 class="font-display font-black text-4xl md:text-5xl uppercase text-center mb-20">Toolbox & <span
+                            class="text-primary italic">Stack</span></h2>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        <div class="bg-black/80 rounded-2xl border border-white/10 p-8 font-mono text-sm">
+                            <h3 class="text-primary mb-6">Network_Terminal.exe</h3>
+                            <div class="space-y-4 text-white/60">
+                                <div class="flex justify-between border-b border-white/5 pb-1">
+                                    <span>Routing_Switching</span><span class="text-primary">[95%]</span></div>
+                                <div class="flex justify-between border-b border-white/5 pb-1">
+                                    <span>Network_Security</span><span class="text-primary">[85%]</span></div>
+                                <div class="flex justify-between border-b border-white/5 pb-1">
+                                    <span>Mikrotik_Admin</span><span class="text-primary">[90%]</span></div>
+                            </div>
+                        </div>
+                        <div class="bg-black/80 rounded-2xl border border-white/10 p-8 font-mono text-sm">
+                            <h3 class="text-secondary mb-6">Development_Suite.js</h3>
+                            <div class="space-y-4 text-white/60">
+                                <div class="flex justify-between border-b border-white/5 pb-1">
+                                    <span>React_Tailwind</span><span class="text-secondary">[92%]</span></div>
+                                <div class="flex justify-between border-b border-white/5 pb-1">
+                                    <span>JavaScript_ES6</span><span class="text-secondary">[88%]</span></div>
+                                <div class="flex justify-between border-b border-white/5 pb-1">
+                                    <span>Animations_GSAP</span><span class="text-secondary">[80%]</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer
+            class="py-12 border-t border-white/5 text-center text-white/30 text-xs font-mono lowercase tracking-widest">
+            <p>&copy; 2026 ERICK EP-LAB. ALL RIGHTS RESERVED.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
