@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="assets/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Erick EP-LAB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;700;900&family=Space+Mono&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body class="bg-background text-white font-sans selection:bg-primary selection:text-background overflow-x-hidden">
+    <div id="app">
+        <div id="cursor"
+            class="fixed w-4 h-4 bg-primary rounded-full pointer-events-none z-[9999] mix-blend-difference hidden lg:block">
+        </div>
+        <div id="cursor-blur"
+            class="fixed w-24 h-24 bg-primary/20 rounded-full blur-3xl pointer-events-none z-[9998] hidden lg:block">
+        </div>
+
+        <nav id="navbar" class="fixed top-2 md:top-6 left-1/2 -translate-x-1/2 z-50 w-[min(95%,500px)]">
+            <div
+                class="bg-surface/50 backdrop-blur-xl px-6 py-3 rounded-2xl border border-white/10 flex justify-between items-center shadow-2xl shadow-primary/10">
+                <a href="/"><img src="/assets/logo1.png" alt="EP Logo" class="h-10"></a>
+
+                <ul
+                    class="flex gap-4 md:gap-6 text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-white/50">
+                    <li><a href="/" class="hover:text-primary transition-colors">Home</a></li>
+                    <li><a href="/projects.html" class="text-primary tracking-tighter">Project</a></li>
+                    <li><a href="/contact.html" class="hover:text-primary transition-colors">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="pt-32 pb-20">
+            <section id="projects" class="py-20 relative">
+                <div class="container mx-auto px-6">
+                    <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+                        <div class="max-w-xl">
+                            <span
+                                class="text-primary font-mono text-xs uppercase tracking-widest mb-4 block">03_FEATURED_WORKS</span>
+                            <h2 class="font-display font-black text-4xl md:text-6xl uppercase leading-none italic">
+                                Selected <span class="text-white/20 not-italic">Showcase.</span></h2>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+
+                        <!-- Project 1: UNDANGAN NIKAH -->
+                        <div
+                            class="group relative bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 flex flex-col gap-6 hover:border-primary/50 transition-all duration-500 shadow-xl overflow-hidden">
+                            <div
+                                class="project-carousel relative aspect-video rounded-xl overflow-hidden bg-slate-900 border border-white/5 group-hover:border-primary/20 transition-colors group/carousel">
+                                <!-- Slides -->
+                                <div class="carousel-track w-full h-full relative">
+                                    <img src="assets/photo2.jpg"
+                                        class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 z-10"
+                                        alt="Asset 01">
+                                    <img src="assets/photo3.jpg"
+                                        class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 z-0"
+                                        alt="Asset 02">
+                                    <img src="assets/photo1.jpg"
+                                        class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 z-0"
+                                        alt="Asset 03">
+                                    <img src="assets/photo8.jpg"
+                                        class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 z-0"
+                                        alt="Asset 04">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent z-20 pointer-events-none">
+                                    </div>
+                                </div>
+
+                                <!-- Navigation Buttons -->
+                                <button
+                                    class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/70 hover:bg-primary hover:text-black transition-all z-30 opacity-0 group-hover/carousel:opacity-100 -translate-x-2 group-hover/carousel:translate-x-0 duration-300">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M15 18l-6-6 6-6" />
+                                    </svg>
+                                </button>
+                                <button
+                                    class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/70 hover:bg-primary hover:text-black transition-all z-30 opacity-0 group-hover/carousel:opacity-100 translate-x-2 group-hover/carousel:translate-x-0 duration-300">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M9 18l6-6-6-6" />
+                                    </svg>
+                                </button>
+
+                                <!-- Indicators -->
+                                <div
+                                    class="carousel-dots absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 z-30 px-2 py-1 bg-black/30 backdrop-blur-md rounded-full border border-white/5 opacity-0 group-hover/carousel:opacity-100 transition-all duration-500 delay-75 translate-y-2 group-hover/carousel:translate-y-0">
+                                    <button
+                                        class="w-1.5 h-1.5 rounded-full bg-primary transition-all hover:scale-125 focus:outline-none"
+                                        aria-label="Slide 1"></button>
+                                    <button
+                                        class="w-1.5 h-1.5 rounded-full bg-white/20 hover:bg-white transition-all hover:scale-125 focus:outline-none"
+                                        aria-label="Slide 2"></button>
+                                    <button
+                                        class="w-1.5 h-1.5 rounded-full bg-white/20 hover:bg-white transition-all hover:scale-125 focus:outline-none"
+                                        aria-label="Slide 3"></button>
+                                    <button
+                                        class="w-1.5 h-1.5 rounded-full bg-white/20 hover:bg-white transition-all hover:scale-125 focus:outline-none"
+                                        aria-label="Slide 4"></button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-3">
+                                <div class="flex justify-between items-center">
+                                    <h3 class="text-xl font-display font-bold text-white tracking-tight uppercase">
+                                        Web Wedding Invitation</h3>
+                                    <span class="text-primary font-mono text-xs">Rp.xxx <span
+                                            class="text-[8px] text-white/20">/Pax</span></span>
+                                </div>
+                                <div class="py-3 border-y border-white/5 font-mono text-[9px] text-white/30 uppercase">
+                                    <span class="text-white/10 uppercase block mb-2">Fitur</span>
+                                    <ul class="space-y-1">
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Responsive Design
+                                            (Mobile, Tablet, Desktop)</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Event countdown &
+                                            schedule details</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Photo gallery & love
+                                            story sectionn</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Location map & RSVP
+                                            integration</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Fast loading & easy
+                                            sharing via link</li>
+                                    </ul>
+                                </div>
+                                <p class="text-white/40 text-xs leading-relaxed">A modern digital wedding invitation
+                                    that’s elegant, interactive, and easy to share.
+                                    Designed to look great on any device, your special day can be accessed anytime,
+                                    anywhere.</p>
+                            </div>
+                            <div class="flex gap-3">
+                                <a href="https://erickprentinoep-lab.github.io/Undangan-Nikah/"
+                                    class="flex-1 py-3 bg-primary text-background text-[10px] font-mono font-bold rounded-lg uppercase tracking-wider hover:bg-white transition-colors duration-300 flex items-center justify-center">See
+                                    Project</a>
+                                <a href="https://wa.me/6287745734702?text=Halo%20saya%20tertarik%20dengan%20project%20ini"
+                                    target="_blank"
+                                    class="px-4 py-3 bg-white/5 text-white/50 border border-white/10 rounded-lg hover:text-primary hover:border-primary/30 transition-all text-[10px] font-mono font-bold uppercase tracking-wider flex items-center gap-2">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                        </path>
+                                    </svg>
+                                    Consultation by WA
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Project 2: Porto Demar -->
+                        <div
+                            class="group relative bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 flex flex-col gap-6 hover:border-primary/50 transition-all duration-500 shadow-xl overflow-hidden">
+                            <div
+                                class="project-carousel relative aspect-video rounded-xl overflow-hidden bg-slate-900 border border-white/5 group-hover:border-primary/20 transition-colors group/carousel">
+                                <!-- Slides -->
+                                <div class="carousel-track w-full h-full relative">
+                                    <img src="assets/demar1.png"
+                                        class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 z-10"
+                                        alt="Asset 01">
+                                    <img src="assets/demar2.png"
+                                        class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 z-0"
+                                        alt="Asset 02">
+                                    <img src="assets/demar3.png"
+                                        class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 z-0"
+                                        alt="Asset 03">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent z-20 pointer-events-none">
+                                    </div>
+                                </div>
+
+                                <!-- Navigation Buttons -->
+                                <button
+                                    class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/70 hover:bg-primary hover:text-black transition-all z-30 opacity-0 group-hover/carousel:opacity-100 -translate-x-2 group-hover/carousel:translate-x-0 duration-300">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M15 18l-6-6 6-6" />
+                                    </svg>
+                                </button>
+                                <button
+                                    class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/70 hover:bg-primary hover:text-black transition-all z-30 opacity-0 group-hover/carousel:opacity-100 translate-x-2 group-hover/carousel:translate-x-0 duration-300">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M9 18l6-6-6-6" />
+                                    </svg>
+                                </button>
+
+                                <!-- Indicators -->
+                                <div
+                                    class="carousel-dots absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 z-30 px-2 py-1 bg-black/30 backdrop-blur-md rounded-full border border-white/5 opacity-0 group-hover/carousel:opacity-100 transition-all duration-500 delay-75 translate-y-2 group-hover/carousel:translate-y-0">
+                                    <button
+                                        class="w-1.5 h-1.5 rounded-full bg-primary transition-all hover:scale-125 focus:outline-none"
+                                        aria-label="Slide 1"></button>
+                                    <button
+                                        class="w-1.5 h-1.5 rounded-full bg-white/20 hover:bg-white transition-all hover:scale-125 focus:outline-none"
+                                        aria-label="Slide 2"></button>
+                                    <button
+                                        class="w-1.5 h-1.5 rounded-full bg-white/20 hover:bg-white transition-all hover:scale-125 focus:outline-none"
+                                        aria-label="Slide 3"></button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-3">
+                                <div class="flex justify-between items-center">
+                                    <h3 class="text-xl font-display font-bold text-white tracking-tight uppercase">
+                                        Portofolio & Branding</h3>
+                                    <span class="text-primary font-mono text-xs">Rp.xxx <span
+                                            class="text-[8px] text-white/20">/Pax</span></span>
+                                </div>
+                                <div class="py-3 border-y border-white/5 font-mono text-[9px] text-white/30 uppercase">
+                                    <span class="text-white/10 uppercase block mb-2">Fitur</span>
+                                    <ul class="space-y-1">
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Responsive Design
+                                            (Mobile, Tablet, Desktop)</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Project showcase &
+                                            visual gallery</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Branding-focused
+                                            layout & visuals</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Smooth animations and
+                                            modern UI</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Fast loading and easy
+                                            navigation</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Button to direct to
+                                            link sosial media or marketplaces</li>
+                                    </ul>
+                                </div>
+                                <p class="text-white/40 text-xs leading-relaxed">A clean, modern digital portfolio
+                                    designed to showcase your work and strengthen your personal or business brand.
+                                    Built to make a strong first impression and highlight your creativity across all
+                                    devices.</p>
+                            </div>
+                            <div class="flex gap-3">
+                                <a href="dmotiondemar.my.id"
+                                    class="flex-1 py-3 bg-primary text-background text-[10px] font-mono font-bold rounded-lg uppercase tracking-wider hover:bg-white transition-colors duration-300 flex items-center justify-center">See
+                                    Project</a>
+                                <a href="https://wa.me/6287745734702?text=Halo%20saya%20tertarik%20dengan%20project%20ini"
+                                    target="_blank"
+                                    class="px-4 py-3 bg-white/5 text-white/50 border border-white/10 rounded-lg hover:text-primary hover:border-primary/30 transition-all text-[10px] font-mono font-bold uppercase tracking-wider flex items-center gap-2">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                        </path>
+                                    </svg>
+                                    Consultation by WA
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <!-- Project 3: Porto Deby -->
+                        <div
+                            class="group relative bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 flex flex-col gap-6 hover:border-primary/50 transition-all duration-500 shadow-xl overflow-hidden">
+                            <div
+                                class="project-carousel relative aspect-video rounded-xl overflow-hidden bg-slate-900 border border-white/5 group-hover:border-primary/20 transition-colors group/carousel">
+                                <!-- Slides -->
+                                <div class="carousel-track w-full h-full relative">
+                                    <img src="assets/deby1.png"
+                                        class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 z-10"
+                                        alt="Asset 01">
+                                    <img src="assets/deby2.png"
+                                        class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 z-0"
+                                        alt="Asset 02">
+                                    <img src="assets/deby3.png"
+                                        class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 z-0"
+                                        alt="Asset 03">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent z-20 pointer-events-none">
+                                    </div>
+                                </div>
+
+                                <!-- Navigation Buttons -->
+                                <button
+                                    class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/70 hover:bg-primary hover:text-black transition-all z-30 opacity-0 group-hover/carousel:opacity-100 -translate-x-2 group-hover/carousel:translate-x-0 duration-300">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M15 18l-6-6 6-6" />
+                                    </svg>
+                                </button>
+                                <button
+                                    class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/70 hover:bg-primary hover:text-black transition-all z-30 opacity-0 group-hover/carousel:opacity-100 translate-x-2 group-hover/carousel:translate-x-0 duration-300">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M9 18l6-6-6-6" />
+                                    </svg>
+                                </button>
+
+                                <!-- Indicators -->
+                                <div
+                                    class="carousel-dots absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 z-30 px-2 py-1 bg-black/30 backdrop-blur-md rounded-full border border-white/5 opacity-0 group-hover/carousel:opacity-100 transition-all duration-500 delay-75 translate-y-2 group-hover/carousel:translate-y-0">
+                                    <button
+                                        class="w-1.5 h-1.5 rounded-full bg-primary transition-all hover:scale-125 focus:outline-none"
+                                        aria-label="Slide 1"></button>
+                                    <button
+                                        class="w-1.5 h-1.5 rounded-full bg-white/20 hover:bg-white transition-all hover:scale-125 focus:outline-none"
+                                        aria-label="Slide 2"></button>
+                                    <button
+                                        class="w-1.5 h-1.5 rounded-full bg-white/20 hover:bg-white transition-all hover:scale-125 focus:outline-none"
+                                        aria-label="Slide 3"></button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-3">
+                                <div class="flex justify-between items-center">
+                                    <h3 class="text-xl font-display font-bold text-white tracking-tight uppercase">
+                                        DJ Portofolio & assets</h3>
+                                    <span class="text-primary font-mono text-xs">Rp.xxx <span
+                                            class="text-[8px] text-white/20">/Pax</span></span>
+                                </div>
+                                <div class="py-3 border-y border-white/5 font-mono text-[9px] text-white/30 uppercase">
+                                    <span class="text-white/10 uppercase block mb-2">Fitur</span>
+                                    <ul class="space-y-1">
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Responsive Design
+                                            (Mobile, Tablet, Desktop)</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Sounclound Link & Play
+                                            Button</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Photo gallery & visual
+                                            assets</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Show Profiles</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Smooth animations and
+                                            modern UI</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Fast loading and easy
+                                            navigation</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Social media &
+                                            streaming platform links</li>
+                                    </ul>
+                                </div>
+                                <p class="text-white/40 text-xs leading-relaxed">A modern digital portfolio built to
+                                    showcase your DJ identity, music, and creative assets in one place.
+                                    Designed to help DJs stand out, get booked, and share their work easily.</p>
+                            </div>
+                            <div class="flex gap-3">
+                                <a href="https://erickprentinoep-lab.github.io/DJ-Deby-Kennedy/"
+                                    class="flex-1 py-3 bg-primary text-background text-[10px] font-mono font-bold rounded-lg uppercase tracking-wider hover:bg-white transition-colors duration-300 flex items-center justify-center">See
+                                    Project</a>
+                                <a href="https://wa.me/6287745734702?text=Halo%20saya%20tertarik%20dengan%20project%20ini"
+                                    target="_blank"
+                                    class="px-4 py-3 bg-white/5 text-white/50 border border-white/10 rounded-lg hover:text-primary hover:border-primary/30 transition-all text-[10px] font-mono font-bold uppercase tracking-wider flex items-center gap-2">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                        </path>
+                                    </svg>
+                                    Consultation by WA
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Project 4: Undanganyuk -->
+                        <div
+                            class="group relative bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 flex flex-col gap-6 hover:border-primary/50 transition-all duration-500 shadow-xl overflow-hidden">
+                            <div
+                                class="project-carousel relative aspect-video rounded-xl overflow-hidden bg-slate-900 border border-white/5 group-hover:border-primary/20 transition-colors group/carousel">
+                                <!-- Slides -->
+                                <div class="carousel-track w-full h-full relative">
+                                    <img src="assets/undanganyuk1.png"
+                                        class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 z-10"
+                                        alt="Asset 01">
+                                    <img src="assets/undanganyuk2.png"
+                                        class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 z-0"
+                                        alt="Asset 02">
+                                    <img src="assets/undanganyuk3.png"
+                                        class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 z-0"
+                                        alt="Asset 03">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent z-20 pointer-events-none">
+                                    </div>
+                                </div>
+
+                                <!-- Navigation Buttons -->
+                                <button
+                                    class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/70 hover:bg-primary hover:text-black transition-all z-30 opacity-0 group-hover/carousel:opacity-100 -translate-x-2 group-hover/carousel:translate-x-0 duration-300">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M15 18l-6-6 6-6" />
+                                    </svg>
+                                </button>
+                                <button
+                                    class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/70 hover:bg-primary hover:text-black transition-all z-30 opacity-0 group-hover/carousel:opacity-100 translate-x-2 group-hover/carousel:translate-x-0 duration-300">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M9 18l6-6-6-6" />
+                                    </svg>
+                                </button>
+
+                                <!-- Indicators -->
+                                <div
+                                    class="carousel-dots absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 z-30 px-2 py-1 bg-black/30 backdrop-blur-md rounded-full border border-white/5 opacity-0 group-hover/carousel:opacity-100 transition-all duration-500 delay-75 translate-y-2 group-hover/carousel:translate-y-0">
+                                    <button
+                                        class="w-1.5 h-1.5 rounded-full bg-primary transition-all hover:scale-125 focus:outline-none"
+                                        aria-label="Slide 1"></button>
+                                    <button
+                                        class="w-1.5 h-1.5 rounded-full bg-white/20 hover:bg-white transition-all hover:scale-125 focus:outline-none"
+                                        aria-label="Slide 2"></button>
+                                    <button
+                                        class="w-1.5 h-1.5 rounded-full bg-white/20 hover:bg-white transition-all hover:scale-125 focus:outline-none"
+                                        aria-label="Slide 3"></button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-3">
+                                <div class="flex justify-between items-center">
+                                    <h3 class="text-xl font-display font-bold text-white tracking-tight uppercase">
+                                        Website Sales Landing Page</h3>
+                                    <span class="text-primary font-mono text-xs">Rp.xxx <span
+                                            class="text-[8px] text-white/20">/Pax</span></span>
+                                </div>
+                                <div class="py-3 border-y border-white/5 font-mono text-[9px] text-white/30 uppercase">
+                                    <span class="text-white/10 uppercase block mb-2">Fitur</span>
+                                    <ul class="space-y-1">
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Responsive Design
+                                            (Mobile, Tablet, Desktop)</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Clear headline & value
+                                            proposition</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Product or service
+                                            showcase</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Pricing or package
+                                            sections</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Call-to-action buttons
+                                            (Order, Contact, Book Now)</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Link To Social Media
+                                        </li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Testimonials & social
+                                            proof</li>
+                                    </ul>
+                                </div>
+                                <p class="text-white/40 text-xs leading-relaxed">A high-converting landing page designed
+                                    to sell your services, products, or digital solutions.
+                                    Built to grab attention, build trust, and turn visitors into customers.</p>
+                            </div>
+                            <div class="flex gap-3">
+                                <a href="https://undanganyuk.vercel.app/"
+                                    class="flex-1 py-3 bg-primary text-background text-[10px] font-mono font-bold rounded-lg uppercase tracking-wider hover:bg-white transition-colors duration-300 flex items-center justify-center">See
+                                    Project</a>
+                                <a href="https://wa.me/6287745734702?text=Halo%20saya%20tertarik%20dengan%20project%20ini"
+                                    target="_blank"
+                                    class="px-4 py-3 bg-white/5 text-white/50 border border-white/10 rounded-lg hover:text-primary hover:border-primary/30 transition-all text-[10px] font-mono font-bold uppercase tracking-wider flex items-center gap-2">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                        </path>
+                                    </svg>
+                                    Consultation by WA
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Project 5: 88 Motor -->
+
+                        <div
+                            class="group relative bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 flex flex-col gap-6 hover:border-primary/50 transition-all duration-500 shadow-xl overflow-hidden">
+                            <div
+                                class="project-carousel relative aspect-video rounded-xl overflow-hidden bg-slate-900 border border-white/5 group-hover:border-primary/20 transition-colors group/carousel">
+                                <!-- Slides -->
+                                <div class="carousel-track w-full h-full relative">
+                                    <img src="assets/881.png"
+                                        class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 z-10"
+                                        alt="Asset 01">
+                                    <img src="assets/882.png"
+                                        class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 z-0"
+                                        alt="Asset 02">
+                                    <img src="assets/883.png"
+                                        class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 z-0"
+                                        alt="Asset 03">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent z-20 pointer-events-none">
+                                    </div>
+                                </div>
+
+                                <!-- Navigation Buttons -->
+                                <button
+                                    class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/70 hover:bg-primary hover:text-black transition-all z-30 opacity-0 group-hover/carousel:opacity-100 -translate-x-2 group-hover/carousel:translate-x-0 duration-300">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M15 18l-6-6 6-6" />
+                                    </svg>
+                                </button>
+                                <button
+                                    class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/70 hover:bg-primary hover:text-black transition-all z-30 opacity-0 group-hover/carousel:opacity-100 translate-x-2 group-hover/carousel:translate-x-0 duration-300">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M9 18l6-6-6-6" />
+                                    </svg>
+                                </button>
+
+                                <!-- Indicators -->
+                                <div
+                                    class="carousel-dots absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 z-30 px-2 py-1 bg-black/30 backdrop-blur-md rounded-full border border-white/5 opacity-0 group-hover/carousel:opacity-100 transition-all duration-500 delay-75 translate-y-2 group-hover/carousel:translate-y-0">
+                                    <button
+                                        class="w-1.5 h-1.5 rounded-full bg-primary transition-all hover:scale-125 focus:outline-none"
+                                        aria-label="Slide 1"></button>
+                                    <button
+                                        class="w-1.5 h-1.5 rounded-full bg-white/20 hover:bg-white transition-all hover:scale-125 focus:outline-none"
+                                        aria-label="Slide 2"></button>
+                                    <button
+                                        class="w-1.5 h-1.5 rounded-full bg-white/20 hover:bg-white transition-all hover:scale-125 focus:outline-none"
+                                        aria-label="Slide 3"></button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-3">
+                                <div class="flex justify-between items-center">
+                                    <h3 class="text-xl font-display font-bold text-white tracking-tight uppercase">
+                                        Business Landing Page Website</h3>
+                                    <span class="text-primary font-mono text-xs">Rp.xxx <span
+                                            class="text-[8px] text-white/20">/Pax</span></span>
+                                </div>
+                                <div class="py-3 border-y border-white/5 font-mono text-[9px] text-white/30 uppercase">
+                                    <span class="text-white/10 uppercase block mb-2">Fitur</span>
+                                    <ul class="space-y-1">
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Responsive Design
+                                            (Mobile, Tablet, Desktop)</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Clear business
+                                            introduction & services overview</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Product or service
+                                            highlights</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>WhatsApp / contact
+                                            button integration</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Call-to-action buttons
+                                            (Order, Contact, Book Now)</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Link To Social Media
+                                        </li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Google Maps location
+                                            integration</li>
+                                    </ul>
+                                </div>
+                                <p class="text-white/40 text-xs leading-relaxed">A professional landing page designed to
+                                    promote your business clearly and effectively.
+                                    Built to help customers understand your services, trust your brand, and contact you.
+                                </p>
+                            </div>
+                            <div class="flex gap-3">
+                                <a href="https://erickprentinoep-lab.github.io/88-Motor/"
+                                    class="flex-1 py-3 bg-primary text-background text-[10px] font-mono font-bold rounded-lg uppercase tracking-wider hover:bg-white transition-colors duration-300 flex items-center justify-center">See
+                                    Project</a>
+                                <a href="https://wa.me/6287745734702?text=Halo%20saya%20tertarik%20dengan%20project%20ini"
+                                    target="_blank"
+                                    class="px-4 py-3 bg-white/5 text-white/50 border border-white/10 rounded-lg hover:text-primary hover:border-primary/30 transition-all text-[10px] font-mono font-bold uppercase tracking-wider flex items-center gap-2">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                        </path>
+                                    </svg>
+                                    Consultation by WA
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Project 6: Raeye -->
+                        <div
+                            class="group relative bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 flex flex-col gap-6 hover:border-primary/50 transition-all duration-500 shadow-xl overflow-hidden">
+                            <div
+                                class="project-carousel relative aspect-video rounded-xl overflow-hidden bg-slate-900 border border-white/5 group-hover:border-primary/20 transition-colors group/carousel">
+                                <!-- Slides -->
+                                <div class="carousel-track w-full h-full relative">
+                                    <img src="assets/raeye1.png"
+                                        class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 z-10"
+                                        alt="Asset 01">
+                                    <img src="assets/raeye2.png"
+                                        class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 z-0"
+                                        alt="Asset 02">
+                                    <img src="assets/raeye3.png"
+                                        class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 z-0"
+                                        alt="Asset 03">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent z-20 pointer-events-none">
+                                    </div>
+                                </div>
+
+                                <!-- Navigation Buttons -->
+                                <button
+                                    class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/70 hover:bg-primary hover:text-black transition-all z-30 opacity-0 group-hover/carousel:opacity-100 -translate-x-2 group-hover/carousel:translate-x-0 duration-300">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M15 18l-6-6 6-6" />
+                                    </svg>
+                                </button>
+                                <button
+                                    class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/70 hover:bg-primary hover:text-black transition-all z-30 opacity-0 group-hover/carousel:opacity-100 translate-x-2 group-hover/carousel:translate-x-0 duration-300">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M9 18l6-6-6-6" />
+                                    </svg>
+                                </button>
+
+                                <!-- Indicators -->
+                                <div
+                                    class="carousel-dots absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 z-30 px-2 py-1 bg-black/30 backdrop-blur-md rounded-full border border-white/5 opacity-0 group-hover/carousel:opacity-100 transition-all duration-500 delay-75 translate-y-2 group-hover/carousel:translate-y-0">
+                                    <button
+                                        class="w-1.5 h-1.5 rounded-full bg-primary transition-all hover:scale-125 focus:outline-none"
+                                        aria-label="Slide 1"></button>
+                                    <button
+                                        class="w-1.5 h-1.5 rounded-full bg-white/20 hover:bg-white transition-all hover:scale-125 focus:outline-none"
+                                        aria-label="Slide 2"></button>
+                                    <button
+                                        class="w-1.5 h-1.5 rounded-full bg-white/20 hover:bg-white transition-all hover:scale-125 focus:outline-none"
+                                        aria-label="Slide 3"></button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-3">
+                                <div class="flex justify-between items-center">
+                                    <h3 class="text-xl font-display font-bold text-white tracking-tight uppercase">
+                                        F&B Landing Page Website</h3>
+                                    <span class="text-primary font-mono text-xs">Rp.xxx <span
+                                            class="text-[8px] text-white/20">/Pax</span></span>
+                                </div>
+                                <div class="py-3 border-y border-white/5 font-mono text-[9px] text-white/30 uppercase">
+                                    <span class="text-white/10 uppercase block mb-2">Fitur</span>
+                                    <ul class="space-y-1">
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Responsive Design
+                                            (Mobile, Tablet, Desktop)</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Mouth-watering menu
+                                            showcase with images</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Special offers &
+                                            promotions section</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Easy online
+                                            reservation or order buttons</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Customer reviews &
+                                            social proof</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Fast loading and easy
+                                            navigation</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Social media &
+                                            streaming platform links</li>
+                                    </ul>
+                                </div>
+                                <p class="text-white/40 text-xs leading-relaxed">A deliciously designed landing page
+                                    tailored for food & beverage businesses to attract customers and showcase their
+                                    menu.
+                                    Perfect for restaurants, cafés, food trucks, and catering services aiming to boost
+                                    orders and bookings online.</p>
+
+                                <!-- Project 7 : CCTV Raeye -->
+                            </div>
+                            <div class="flex gap-3">
+                                <a href="#"
+                                    class="flex-1 py-3 bg-primary text-background text-[10px] font-mono font-bold rounded-lg uppercase tracking-wider hover:bg-white transition-colors duration-300 flex items-center justify-center">See
+                                    Project</a>
+                                <a href="https://wa.me/6287745734702?text=Halo%20saya%20tertarik%20dengan%20project%20ini"
+                                    target="_blank"
+                                    class="px-4 py-3 bg-white/5 text-white/50 border border-white/10 rounded-lg hover:text-primary hover:border-primary/30 transition-all text-[10px] font-mono font-bold uppercase tracking-wider flex items-center gap-2">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                        </path>
+                                    </svg>
+                                    Consultation by WA
+                                </a>
+                            </div>
+                        </div>
+                        <div
+                            class="group relative bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 flex flex-col gap-6 hover:border-primary/50 transition-all duration-500 shadow-xl overflow-hidden">
+                            <div
+                                class="project-carousel relative aspect-video rounded-xl overflow-hidden bg-slate-900 border border-white/5 group-hover:border-primary/20 transition-colors group/carousel">
+                                <!-- Slides -->
+                                <div class="carousel-track w-full h-full relative">
+                                    <img src="assets/cctv1.png"
+                                        class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 z-10"
+                                        alt="Asset 01">
+                                    <img src="assets/cctv2.png"
+                                        class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 z-0"
+                                        alt="Asset 02">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent z-20 pointer-events-none">
+                                    </div>
+                                </div>
+
+                                <!-- Navigation Buttons -->
+                                <button
+                                    class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/70 hover:bg-primary hover:text-black transition-all z-30 opacity-0 group-hover/carousel:opacity-100 -translate-x-2 group-hover/carousel:translate-x-0 duration-300">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M15 18l-6-6 6-6" />
+                                    </svg>
+                                </button>
+                                <button
+                                    class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/70 hover:bg-primary hover:text-black transition-all z-30 opacity-0 group-hover/carousel:opacity-100 translate-x-2 group-hover/carousel:translate-x-0 duration-300">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M9 18l6-6-6-6" />
+                                    </svg>
+                                </button>
+
+                                <!-- Indicators -->
+                                <div
+                                    class="carousel-dots absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 z-30 px-2 py-1 bg-black/30 backdrop-blur-md rounded-full border border-white/5 opacity-0 group-hover/carousel:opacity-100 transition-all duration-500 delay-75 translate-y-2 group-hover/carousel:translate-y-0">
+                                    <button
+                                        class="w-1.5 h-1.5 rounded-full bg-primary transition-all hover:scale-125 focus:outline-none"
+                                        aria-label="Slide 1"></button>
+                                    <button
+                                        class="w-1.5 h-1.5 rounded-full bg-white/20 hover:bg-white transition-all hover:scale-125 focus:outline-none"
+                                        aria-label="Slide 2"></button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-3">
+                                <div class="flex justify-between items-center">
+                                    <h3 class="text-xl font-display font-bold text-white tracking-tight uppercase">
+                                        Installation & Configuration CCTV</h3>
+                                    <span class="text-primary font-mono text-xs">Rp.xxx <span
+                                            class="text-[8px] text-white/20">/Pax</span></span>
+                                </div>
+                                <div class="py-3 border-y border-white/5 font-mono text-[9px] text-white/30 uppercase">
+                                    <span class="text-white/10 uppercase block mb-2">Fitur</span>
+                                    <ul class="space-y-1">
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Setting Audio</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Setting Video</li>
+                                    </ul>
+                                </div>
+                                <p class="text-white/40 text-xs leading-relaxed">Installation & Configuration 48 CCTV IP
+                                    CAM.</p>
+                            </div>
+                            <div class="flex gap-3">
+                                <a href="https://wa.me/6287745734702?text=Halo%20saya%20tertarik%20dengan%20project%20ini"
+                                    target="_blank"
+                                    class="flex-1 py-3 bg-white/5 text-white/50 border border-white/10 rounded-lg hover:text-primary hover:border-primary/30 transition-all text-[10px] font-mono font-bold uppercase tracking-wider flex items-center justify-center gap-2">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                        </path>
+                                    </svg>
+                                    Consultation by WA
+                                </a>
+                            </div>
+                        </div>
+                        <div
+                            class="group relative bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 flex flex-col gap-6 hover:border-primary/50 transition-all duration-500 shadow-xl overflow-hidden">
+                            <div
+                                class="project-carousel relative aspect-video rounded-xl overflow-hidden bg-slate-900 border border-white/5 group-hover:border-primary/20 transition-colors group/carousel">
+                                <!-- Slides -->
+                                <div class="carousel-track w-full h-full relative">
+                                    <img src="assets/mikrotik.png"
+                                        class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 z-10"
+                                        alt="Asset 01">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent z-20 pointer-events-none">
+                                    </div>
+                                </div>
+
+                                <!-- Navigation Buttons -->
+                                <button
+                                    class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/70 hover:bg-primary hover:text-black transition-all z-30 opacity-0 group-hover/carousel:opacity-100 -translate-x-2 group-hover/carousel:translate-x-0 duration-300">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M15 18l-6-6 6-6" />
+                                    </svg>
+                                </button>
+                                <button
+                                    class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/70 hover:bg-primary hover:text-black transition-all z-30 opacity-0 group-hover/carousel:opacity-100 translate-x-2 group-hover/carousel:translate-x-0 duration-300">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M9 18l6-6-6-6" />
+                                    </svg>
+                                </button>
+
+                                <!-- Indicators -->
+                                <div
+                                    class="carousel-dots absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 z-30 px-2 py-1 bg-black/30 backdrop-blur-md rounded-full border border-white/5 opacity-0 group-hover/carousel:opacity-100 transition-all duration-500 delay-75 translate-y-2 group-hover/carousel:translate-y-0">
+                                    <button
+                                        class="w-1.5 h-1.5 rounded-full bg-primary transition-all hover:scale-125 focus:outline-none"
+                                        aria-label="Slide 1"></button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-3">
+                                <div class="flex justify-between items-center">
+                                    <h3 class="text-xl font-display font-bold text-white tracking-tight uppercase">
+                                        Installation & Configuration Mikrotik</h3>
+                                    <span class="text-primary font-mono text-xs">Rp.xxx <span
+                                            class="text-[8px] text-white/20">/Pax</span></span>
+                                </div>
+                                <div class="py-3 border-y border-white/5 font-mono text-[9px] text-white/30 uppercase">
+                                    <span class="text-white/10 uppercase block mb-2">Fitur</span>
+                                    <ul class="space-y-1">
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Initial MikroTik
+                                            router setup</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>VLAN & Routing
+                                            configuration for network segmentation</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Firewall & security
+                                            rules setup</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>VPN & remote access
+                                            configuration (L2TP / IPsec / PPTP)</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Bandwidth management &
+                                            traffic prioritization</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Network monitoring &
+                                            troubleshooting
+                                        </li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Optimized for
+                                            performance, reliability, and scalability</li>
+                                    </ul>
+                                </div>
+                                <p class="text-white/40 text-xs leading-relaxed">setup and configuration of MikroTik
+                                    routers to ensure a stable, secure, and optimized network for your business or home.
+                                </p>
+                            </div>
+                            <div class="flex gap-3">
+                                <a href="https://wa.me/6287745734702?text=Halo%20saya%20tertarik%20dengan%20project%20ini"
+                                    target="_blank"
+                                    class="flex-1 py-3 bg-white/5 text-white/50 border border-white/10 rounded-lg hover:text-primary hover:border-primary/30 transition-all text-[10px] font-mono font-bold uppercase tracking-wider flex items-center justify-center gap-2">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                        </path>
+                                    </svg>
+                                    Consultation by WA
+                                </a>
+                            </div>
+                        </div>
+                        <div
+                            class="group relative bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 flex flex-col gap-6 hover:border-primary/50 transition-all duration-500 shadow-xl overflow-hidden">
+                            <div
+                                class="project-carousel relative aspect-video rounded-xl overflow-hidden bg-slate-900 border border-white/5 group-hover:border-primary/20 transition-colors group/carousel">
+                                <!-- Slides -->
+                                <div class="carousel-track w-full h-full relative">
+                                    <img src="assets/ruijie.png"
+                                        class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 z-10"
+                                        alt="Asset 01">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent z-20 pointer-events-none">
+                                    </div>
+                                </div>
+
+                                <!-- Navigation Buttons -->
+                                <button
+                                    class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/70 hover:bg-primary hover:text-black transition-all z-30 opacity-0 group-hover/carousel:opacity-100 -translate-x-2 group-hover/carousel:translate-x-0 duration-300">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M15 18l-6-6 6-6" />
+                                    </svg>
+                                </button>
+                                <button
+                                    class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/70 hover:bg-primary hover:text-black transition-all z-30 opacity-0 group-hover/carousel:opacity-100 translate-x-2 group-hover/carousel:translate-x-0 duration-300">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M9 18l6-6-6-6" />
+                                    </svg>
+                                </button>
+
+                                <!-- Indicators -->
+                                <div
+                                    class="carousel-dots absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 z-30 px-2 py-1 bg-black/30 backdrop-blur-md rounded-full border border-white/5 opacity-0 group-hover/carousel:opacity-100 transition-all duration-500 delay-75 translate-y-2 group-hover/carousel:translate-y-0">
+                                    <button
+                                        class="w-1.5 h-1.5 rounded-full bg-primary transition-all hover:scale-125 focus:outline-none"
+                                        aria-label="Slide 1"></button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-3">
+                                <div class="flex justify-between items-center">
+                                    <h3 class="text-xl font-display font-bold text-white tracking-tight uppercase">
+                                        Installation & Configuration Ruijie</h3>
+                                    <span class="text-primary font-mono text-xs">Rp.xxx <span
+                                            class="text-[8px] text-white/20">/Pax</span></span>
+                                </div>
+                                <div class="py-3 border-y border-white/5 font-mono text-[9px] text-white/30 uppercase">
+                                    <span class="text-white/10 uppercase block mb-2">Fitur</span>
+                                    <ul class="space-y-1">
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Initial MikroTik
+                                            router setup</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>VLAN & Routing
+                                            configuration for network segmentation</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Firewall & security
+                                            rules setup</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>VPN & remote access
+                                            configuration (L2TP / IPsec / PPTP)</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Bandwidth management &
+                                            traffic prioritization</li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Network monitoring &
+                                            troubleshooting
+                                        </li>
+                                        <li class="flex items-center gap-2"><span
+                                                class="w-1 h-1 rounded-full bg-primary/50"></span>Optimized for
+                                            performance, reliability, and scalability</li>
+                                    </ul>
+                                </div>
+                                <p class="text-white/40 text-xs leading-relaxed">setup and configuration of Ruijie
+                                    Networks to ensure a stable, secure, and optimized network for your business or
+                                    home.
+                                </p>
+                            </div>
+                            <div class="flex gap-3">
+                                <a href="https://wa.me/6287745734702?text=Halo%20saya%20tertarik%20dengan%20project%20ini"
+                                    target="_blank"
+                                    class="flex-1 py-3 bg-white/5 text-white/50 border border-white/10 rounded-lg hover:text-primary hover:border-primary/30 transition-all text-[10px] font-mono font-bold uppercase tracking-wider flex items-center justify-center gap-2">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                        </path>
+                                    </svg>
+                                    Consultation by WA
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+
+        <footer class="py-20 border-t border-white/5 bg-background overflow-hidden relative">
+            <div
+                class="absolute -bottom-48 left-1/2 -translate-x-1/2 w-full max-w-5xl h-96 bg-primary/20 blur-[120px] rounded-full">
+            </div>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-12 text-center md:text-left">
+                    <div>
+                        <a href="/"><img src="/assets/logo1.png" alt="EP-LAB Logo" class="h-24"></a>
+                        <p class="text-white/40 text-xs mt-4 mt-2 max-w-xs leading-relaxed font-mono italic">"The
+                            network is the computer, and the code is the soul."</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-12">
+                        <div class="space-y-4">
+                            <h4 class="text-[10px] font-mono text-primary uppercase tracking-widest">NAVIGATION</h4>
+                            <ul class="space-y-2 text-sm text-white/40 font-semibold uppercase tracking-wider">
+                                <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+                                <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
+                                <li><a href="projects.html" class="hover:text-white transition-colors">Projects</a></li>
+                            </ul>
+                        </div>
+                        <div class="space-y-4">
+                            <h4 class="text-[10px] font-mono text-primary uppercase tracking-widest">SYSTEM_STATUS</h4>
+                            <div class="flex items-center gap-2 text-[10px] font-mono text-green-500">
+                                <div class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
+                                OPERATIONAL
+                            </div>
+                            <div class="text-[10px] font-mono text-white/20">V.2.0.26_FINAL</div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-mono text-white/20 uppercase tracking-[0.2em]">
+                    <p>&copy; 2026 Erick Esa Putra. DESIGNED FOR THE FUTURE.</p>
+                    <div class="flex gap-6">
+                        <a href="#" class="hover:text-white transition-colors">PRIVACY_POLICY</a>
+                        <a href="#" class="hover:text-white transition-colors">TERMS_OF_SERVICE</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const carousels = document.querySelectorAll('.project-carousel');
+
+            carousels.forEach(carousel => {
+                const slides = carousel.querySelectorAll('.carousel-slide');
+                const prevBtn = carousel.querySelector('.carousel-prev');
+                const nextBtn = carousel.querySelector('.carousel-next');
+                const dots = carousel.querySelectorAll('.carousel-dots button');
+                let currentIndex = 0;
+
+                function updateCarousel(index) {
+                    slides.forEach((slide, i) => {
+                        if (i === index) {
+                            slide.classList.remove('opacity-0', 'z-0');
+                            slide.classList.add('opacity-100', 'z-10');
+                        } else {
+                            slide.classList.remove('opacity-100', 'z-10');
+                            slide.classList.add('opacity-0', 'z-0');
+                        }
+                    });
+
+                    dots.forEach((dot, i) => {
+                        if (i === index) {
+                            dot.classList.remove('bg-white/20', 'hover:bg-white', 'hover:scale-125');
+                            dot.classList.add('bg-primary', 'scale-110');
+                        } else {
+                            dot.classList.add('bg-white/20', 'hover:bg-white', 'hover:scale-125');
+                            dot.classList.remove('bg-primary', 'scale-110');
+                        }
+                    });
+
+                    currentIndex = index;
+                }
+
+                prevBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const newIndex = (currentIndex - 1 + slides.length) % slides.length;
+                    updateCarousel(newIndex);
+                });
+
+                nextBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const newIndex = (currentIndex + 1) % slides.length;
+                    updateCarousel(newIndex);
+                });
+
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        updateCarousel(index);
+                    });
+                });
+            });
+        });
+    </script>
+    <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>

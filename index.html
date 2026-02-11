@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="assets/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Erick | Network Engineer & Front-End Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;700;900&family=Space+Mono&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body class="bg-background text-white font-sans selection:bg-primary selection:text-background overflow-x-hidden">
+    <div id="app">
+        <!-- Custom Cursor -->
+        <div id="cursor"
+            class="fixed w-4 h-4 bg-primary rounded-full pointer-events-none z-[9999] mix-blend-difference hidden lg:block">
+        </div>
+        <div id="cursor-blur"
+            class="fixed w-24 h-24 bg-primary/20 rounded-full blur-3xl pointer-events-none z-[9998] hidden lg:block">
+        </div>
+
+        <!-- Floating Navbar -->
+        <nav id="navbar" class="fixed top-2 md:top-6 left-1/2 -translate-x-1/2 z-50 w-[min(95%,500px)]">
+            <div
+                class="bg-surface/50 backdrop-blur-xl px-6 py-3 rounded-2xl border border-white/10 flex justify-between items-center shadow-2xl shadow-primary/10">
+                <a href="/"><img src="/assets/logo1.png" alt="EP Logo" class="h-10"></a>
+                <ul
+                    class="flex gap-4 md:gap-6 text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-white/50">
+                    <li><a href="/" class="text-primary tracking-tighter">Home</a></li>
+                    <li><a href="/projects.html" class="hover:text-primary transition-colors">Project</a></li>
+                    <li><a href="/contact.html" class="hover:text-primary transition-colors">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <!-- Diagonal Hero Section -->
+            <section id="hero"
+                class="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+                <!-- Background Grid (Persistent) -->
+                <div id="hero-grid"
+                    class="absolute inset-0 z-0 opacity-10 pointer-events-none bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:32px_32px]">
+                </div>
+
+                <!-- Diagonal Divider Lines (X shape) -->
+
+                <div id="hero-divider-2"
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[2px] bg-primary z-20 shadow-[0_0_20px_#00f5ff] rotate-[35deg] scale-x-0 origin-center opacity-70">
+                </div>
+
+
+                <!-- Center Logo -->
+                <div id="hero-center-logo"
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 opacity-0 scale-50">
+                    <div class="relative w-32 h-32 md:w-56 md:h-56 animate-float">
+                        <!-- Orbiting Ring (Optional backdrop) -->
+                        <div
+                            class="absolute inset-0 rounded-full border border-primary/20 animate-[spin_10s_linear_infinite]">
+                        </div>
+                        <img src="./assets/logo.png" alt="Logo"
+                            class="w-full h-full object-contain relative z-10 drop-shadow-[0_0_15px_rgba(0,245,255,0.5)]">
+                    </div>
+                </div>
+
+                <!-- Split Sections -->
+                <div class="container mx-auto px-6 relative z-10 w-full h-full flex items-center justify-center">
+
+                    <!-- Top Left: Network Architect -->
+                    <div id="hero-left"
+                        class="absolute top-[12%] left-[5%] md:top-[18%] md:left-[10%] text-left max-w-xl opacity-0 -translate-x-10 -translate-y-10">
+                        <span
+                            class="text-primary font-mono text-[10px] uppercase tracking-[0.5em] mb-4 block">TERMINAL_ACTIVE</span>
+                        <h1 class="font-display font-black text-2xl md:text-6xl lg:text-7xl leading-none uppercase">
+                            NETWORK <br /> <span class="text-white/20">ARCHITECT</span>
+                        </h1>
+                        <div class="mt-4 flex gap-3 items-start">
+                            <div class="h-px w-8 bg-primary mt-[6px]"></div>
+                            <span
+                                class="text-[8px] md:text-[10px] font-mono text-white/40 uppercase tracking-wider max-w-[160px] md:max-w-[300px] leading-relaxed">
+                                Building stable and secure infrastructure for modern systems.
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Right: Front End Dev -->
+                    <div id="hero-right"
+                        class="absolute bottom-[28%] right-[5%] md:bottom-[15%] md:right-[10%] text-right max-w-xl opacity-0 translate-x-10 translate-y-10">
+                        <span
+                            class="text-primary font-mono text-[10px] uppercase tracking-[0.5em] mb-4 block">RENDER_ENGINE.JS</span>
+                        <h1
+                            class="font-display font-black text-2xl md:text-6xl lg:text-7xl leading-none uppercase italic">
+                            JUNIOR FRONT <br /> <span class="text-primary not-italic text-glow">- END DEV</span>
+                        </h1>
+                        <p
+                            class="mt-3 text-white/30 text-[9px] md:text-sm font-light uppercase tracking-wider ml-auto max-w-[160px] md:max-w-[280px] leading-relaxed">
+                            Crafting clean, responsive, and user-focused web interfaces.
+                        </p>
+                    </div>
+
+
+                </div>
+
+                <!-- Decorative Elements (Optional/Theme matching) -->
+                <div
+                    class="absolute top-10 left-10 text-[8px] font-mono text-white/10 rotate-90 origin-left tracking-widest">
+                    SYSTEM_VERSION_2.0</div>
+                <div
+                    class="absolute bottom-10 right-10 text-[8px] font-mono text-white/10 rotate-90 origin-right tracking-widest lowercase">
+                    erick_portfolio.bin</div>
+            </section>
+
+            <!-- Bottom CTA -->
+            <div id="hero-cta-center" class="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 opacity-0 scale-95">
+                <a href="#about"
+                    class="group flex items-center gap-4 bg-background/50 backdrop-blur-md border border-white/20 p-2 pl-6 rounded-full hover:border-primary/50 transition-all duration-500">
+                    <span class="text-[10px] font-mono uppercase tracking-widest">scroll_down</span>
+                    <div
+                        class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-background group-hover:scale-110 transition-transform duration-500">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="5" y="2" width="14" height="20" rx="7" />
+                            <path d="M12 6v4" class="animate-bounce" />
+                        </svg>
+                    </div>
+                </a>
+            </div>
+
+            <!-- About Section (Bento Grid) -->
+            <section id="about" class="py-32 relative overflow-hidden">
+                <div class="container mx-auto px-6">
+                    <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+                        <div class="max-w-xl">
+                            <span
+                                class="text-primary font-mono text-xs uppercase tracking-widest mb-4 block">01_BIOGRAPHY</span>
+                            <h2 class="font-display font-black text-2xl md:text-6xl uppercase leading-none">BLENDING
+                                DIGITAL
+                                <br /> <span class="text-white/20">Infrastructure & Network Specialist.</span>
+                            </h2>
+                        </div>
+                        <p class="max-w-xs text-white/40 text-sm font-light leading-relaxed">
+                            I’m a Network Engineer with a strong foundation in infrastructure and system reliability,
+                            gradually expanding into front-end development. I focus on building stable, efficient
+                            systems while crafting clean and functional digital interfaces that enhance user experience.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-auto md:h-[600px]">
+                        <!-- Large Feature -->
+                        <div
+                            class="md:col-span-2 md:row-span-2 glass-card p-6 md:p-8 flex flex-col justify-end group overflow-hidden relative">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60 z-10">
+                            </div>
+                            <!-- Network Visual Placeholder -->
+                            <div
+                                class="absolute inset-0 z-0 opacity-20 group-hover:scale-110 transition-transform duration-700">
+                                <img src="./assets/foto1.jpeg" alt="Infrastructure Background"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- EST Badge -->
+                            <div class="absolute top-8 right-8 z-20">
+                                <span class="text-white/20 font-mono text-xs">EST_2019</span>
+                            </div>
+
+                            <div class="relative z-20">
+                                <h3 class="text-2xl md:text-3xl font-display font-black mb-4">Infrastructure & Network
+                                    <br />
+                                    Engineer
+                                </h3>
+                                <p class="text-white/60 text-sm mb-6">Focused on designing, maintaining, and optimizing
+                                    reliable network infrastructures. Experienced with MikroTik, Cisco-based networks,
+                                    system monitoring, and real-world troubleshooting in production environments.</p>
+                                <div class="flex gap-2 flex-wrap">
+                                    <span
+                                        class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-wider">Mikrotik</span>
+                                    <span
+                                        class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-wider">Ruijie</span>
+                                    <span
+                                        class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-wider">Networking
+                                        System</span>
+                                    <span
+                                        class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-wider">Support</span>
+                                    <span
+                                        class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-wider">Troubleshooting</span>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Top Small -->
+                        <div
+                            class="md:col-span-2 glass-card p-6 md:p-8 flex flex-col justify-between group relative overflow-hidden">
+                            <!-- Background Image -->
+                            <div
+                                class="absolute inset-0 z-0 opacity-20 group-hover:scale-110 transition-transform duration-700">
+                                <img src="./assets/foto2.jpeg" alt="Front-End Background"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div class="relative z-10 flex justify-between items-start">
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polyline points="16 18 22 12 16 6" />
+                                        <polyline points="8 6 2 12 8 18" />
+                                    </svg>
+                                </div>
+                                <span class="text-white/20 font-mono text-xs">EST_2025</span>
+                            </div>
+                            <div class="relative z-10">
+                                <h3 class="text-xl font-display font-bold mb-2">Front-End Dev (Support Skill)
+                                </h3>
+                                <p class="text-white/50 text-xs">Building clean, responsive, and performance-focused web
+                                    interfaces using modern front-end tools to support system usability and user
+                                    experience.</p>
+                            </div>
+                            <div class="flex gap-2 flex-wrap">
+                                <span
+                                    class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-wider">HTML</span>
+                                <span
+                                    class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-wider">CSS</span>
+                                <span
+                                    class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-wider">Tailwind</span>
+                                <span
+                                    class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-wider">JavaScript</span>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Small 1 -->
+                        <div class="glass-card p-6 flex flex-col items-center justify-center text-center group">
+                            <span class="text-4xl font-display font-black text-primary mb-2">50+</span>
+                            <span class="text-[10px] font-mono text-white/40 uppercase tracking-widest">Complete
+                                Network
+                                Configured</span>
+                        </div>
+
+                        <!-- Bottom Small 2 -->
+                        <div class="glass-card p-6 flex flex-col items-center justify-center text-center group">
+                            <span class="text-4xl font-display font-black text-secondary mb-2">12+</span>
+                            <span
+                                class="text-[10px] font-mono text-white/40 uppercase tracking-widest">Web_Projects</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section (Terminal Style) -->
+            <section id="skills" class="py-32 bg-surface/30">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-20">
+                        <span
+                            class="text-secondary font-mono text-xs uppercase tracking-widest mb-4 block">02_CAPABILITIES</span>
+                        <h2 class="font-display font-black text-4xl md:text-6xl uppercase">Toolbox & <span
+                                class="text-primary italic">Stack</span></h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        <!-- Networking Skills -->
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+                                <h3 class="font-mono text-sm uppercase tracking-widest">Network_Terminal.exe</h3>
+                            </div>
+                            <div
+                                class="bg-black/80 rounded-2xl border border-white/10 p-8 font-mono text-sm overflow-hidden relative">
+                                <div class="absolute top-0 left-0 w-full h-1 bg-primary/20"></div>
+                                <div class="space-y-4">
+                                    <div class="flex gap-4">
+                                        <span class="text-white/30">></span>
+                                        <p><span class="text-primary">RUN</span> Network_Setup.sh</p>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-x-8 gap-y-4 text-white/60">
+                                        <div class="flex justify-between border-b border-white/5 pb-1">
+                                            <span>IP Addressing & Subnetting</span>
+                                            <span class="text-primary">[OK]</span>
+                                        </div>
+                                        <div class="flex justify-between border-b border-white/5 pb-1">
+                                            <span>Static & Default Routing</span>
+                                            <span class="text-primary">[OK]</span>
+                                        </div>
+                                        <div class="flex justify-between border-b border-white/5 pb-1">
+                                            <span>VLAN Configuration</span>
+                                            <span class="text-primary">[OK]</span>
+                                        </div>
+                                        <div class="flex justify-between border-b border-white/5 pb-1">
+                                            <span>Trunk Access Port Setup</span>
+                                            <span class="text-primary">[OK]</span>
+                                        </div>
+                                        <div class="flex justify-between border-b border-white/5 pb-1">
+                                            <span>DHCP Server & Client </span>
+                                            <span class="text-primary">[OK]</span>
+                                        </div>
+                                        <div class="flex justify-between border-b border-white/5 pb-1">
+                                            <span>NAT & Firewall Rules</span>
+                                            <span class="text-primary">[OK]</span>
+                                        </div>
+                                        <div class="flex justify-between border-b border-white/5 pb-1">
+                                            <span>Basic Network Troubleshooting</span>
+                                            <span class="text-primary">[OK]</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-4 pt-4">
+                                        <span class="text-white/30">></span>
+                                        <p class="animate-pulse">_</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Front End Skills -->
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-2 h-2 rounded-full bg-secondary animate-pulse"></div>
+                                <h3 class="font-mono text-sm uppercase tracking-widest">RUN frontend_setup.js</h3>
+                            </div>
+                            <div
+                                class="bg-black/80 rounded-2xl border border-white/10 p-8 font-mono text-sm overflow-hidden relative">
+                                <div class="absolute top-0 left-0 w-full h-1 bg-secondary/20"></div>
+                                <div class="space-y-4">
+                                    <div class="flex gap-4">
+                                        <span class="text-white/30">></span>
+                                        <p><span class="text-secondary">IMPORT</span> frontend_stack from 'modern-web'
+                                        </p>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-x-8 gap-y-4 text-white/60">
+                                        <div class="flex justify-between border-b border-white/5 pb-1">
+                                            <span>HTML Structure & Semantic</span>
+                                            <span class="text-secondary">[👌]</span>
+                                        </div>
+                                        <div class="flex justify-between border-b border-white/5 pb-1">
+                                            <span>CSS / Tailwind Styling</span>
+                                            <span class="text-secondary">[👌]</span>
+                                        </div>
+                                        <div class="flex justify-between border-b border-white/5 pb-1">
+                                            <span> Responsive Layout</span>
+                                            <span class="text-secondary">[👌]</span>
+                                        </div>
+                                        <div class="flex justify-between border-b border-white/5 pb-1">
+                                            <span>JavaScript DOM Interaction</span>
+                                            <span class="text-secondary">[👌]</span>
+                                        </div>
+                                        <div class="flex justify-between border-b border-white/5 pb-1">
+                                            <span>Basic React Component</span>
+                                            <span class="text-secondary">[👌]</span>
+                                        </div>
+                                        <div class="flex justify-between border-b border-white/5 pb-1">
+                                            <span>GSAP Animation Basic</span>
+                                            <span class="text-secondary">[👌]</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-4 pt-4">
+                                        <span class="text-white/30">></span>
+                                        <p class="text-xs text-white/20 italic">// Optimized for deployment</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-32 relative">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+                    <div class="max-w-xl">
+                        <span
+                            class="text-primary font-mono text-xs uppercase tracking-widest mb-4 block">03_FEATURED_WORKS</span>
+                        <h2 class="font-display font-black text-4xl md:text-6xl uppercase leading-none italic">Selected
+                            <span class="text-white/20 not-italic">Showcase.</span>
+                        </h2>
+                    </div>
+                    <a href="https://github.com/erickprentinoep-lab"
+                        class="px-6 py-3 border border-white/10 rounded-full text-xs font-mono uppercase tracking-widest hover:bg-white/5 transition-colors">view_all_repos</a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Project 1 -->
+                    <div
+                        class="group relative aspect-[16/10] overflow-hidden rounded-3xl bg-surface border border-white/5">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10">
+                        </div>
+                        <!-- Project Visual -->
+                        <div class="absolute inset-0 z-0 group-hover:scale-110 transition-transform duration-700">
+                            <img src="./assets/network.png" alt="Network Configuration Interface"
+                                class="w-full h-full object-cover opacity-60">
+                        </div>
+                        <div class="absolute bottom-4 left-4 right-4 md:bottom-8 md:left-8 md:right-8 z-20">
+                            <div class="flex gap-2 mb-2 md:mb-4">
+                                <span
+                                    class="px-2 py-1 bg-primary/20 text-primary text-[10px] rounded uppercase">Networking</span>
+                            </div>
+                            <h3
+                                class="text-xl md:text-2xl font-display font-bold mb-2 group-hover:text-primary transition-colors">
+                                Network Configuration Interface</h3>
+                            <p class="text-white/50 text-xs mb-3 md:mb-6 max-w-sm line-clamp-2 md:line-clamp-none">A
+                                real-time dashboard designed to monitor
+                                network activity, device status, and basic traffic insights. Built to support daily
+                                operations, troubleshooting, and infrastructure visibility in small to mid-scale
+                                environments.</p>
+                            <a href="projects.html"
+                                class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest group/link">See
+                                More
+                                <svg class="group-hover/link:translate-x-1 transition-transform"
+                                    xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                    <polyline points="12 5 19 12 12 19" />
+                                </svg></a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div
+                        class="group relative aspect-[16/10] overflow-hidden rounded-3xl bg-surface border border-white/5">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10">
+                        </div>
+                        <!-- Project Visual -->
+                        <div class="absolute inset-0 z-0 group-hover:scale-110 transition-transform duration-700">
+                            <img src="./assets/Web.png" alt="Responsive Web Interface"
+                                class="w-full h-full object-cover opacity-60">
+                        </div>
+                        <div class="absolute bottom-4 left-4 right-4 md:bottom-8 md:left-8 md:right-8 z-20">
+                            <div class="flex gap-2 mb-2 md:mb-4">
+                                <span
+                                    class="px-2 py-1 bg-secondary/20 text-secondary text-[10px] rounded uppercase">Web-Dev</span>
+                            </div>
+                            <h3
+                                class="text-xl md:text-2xl font-display font-bold mb-2 group-hover:text-secondary transition-colors">
+                                Responsive Web Interface</h3>
+                            <p class="text-white/50 text-xs mb-3 md:mb-6 max-w-sm line-clamp-2 md:line-clamp-none">A
+                                clean and responsive e-commerce interface
+                                focused on usability, performance, and modern UI design. Built with React and Tailwind
+                                CSS to deliver a smooth user experience across devices.</p>
+                            <a href="projects.html"
+                                class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest group/link">See
+                                More
+                                <svg class="group-hover/link:translate-x-1 transition-transform"
+                                    xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                    <polyline points="12 5 19 12 12 19" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-32 relative">
+            <div class="container mx-auto px-6">
+                <!-- Section Header -->
+                <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+                    <div>
+                        <span
+                            class="text-primary font-mono text-xs uppercase tracking-widest mb-4 block">04_SERVICES</span>
+                        <h2 class="font-display font-black text-4xl md:text-6xl uppercase leading-none">
+                            Services & <span class="text-white/20">Expertise.</span>
+                        </h2>
+                    </div>
+                    <p class="max-w-md text-white/40 text-sm font-light leading-relaxed text-right md:text-left">
+                        Complete tech solutions for fast, secure, and scalable systems.
+                        Built for high performance, easy scaling, and long-term efficiency.
+                    </p>
+                </div>
+
+                <!-- Service Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Service 1: Network -->
+                    <div
+                        class="group p-6 md:p-8 rounded-3xl bg-surface border border-white/5 hover:border-primary/30 transition-all duration-500 relative overflow-hidden">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+                        <div class="relative z-10">
+                            <div
+                                class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-500">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                                    <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                                    <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-display font-bold mb-4 uppercase">Network Engineering</h3>
+                            <ul class="space-y-3 text-sm text-white/50 font-mono">
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1 h-1 rounded-full bg-primary"></span>Mikrotik Config</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1 h-1 rounded-full bg-primary"></span>Ruijie Gateway/Manage Config</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1 h-1 rounded-full bg-primary"></span>VLAN & Routing Design</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1 h-1 rounded-full bg-primary"></span>VPN & Tunneling (L2TP/IPSec)</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1 h-1 rounded-full bg-primary"></span>Bandwidth Management</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1 h-1 rounded-full bg-primary"></span>Load Balancing / Failover Config
+                                </li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1 h-1 rounded-full bg-primary"></span>CCTV installation & Configuration
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Service 2: Web Dev -->
+                    <div
+                        class="group p-6 md:p-8 rounded-3xl bg-surface border border-white/5 hover:border-secondary/30 transition-all duration-500 relative overflow-hidden">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+                        <div class="relative z-10">
+                            <div
+                                class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center text-secondary mb-6 group-hover:scale-110 transition-transform duration-500">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-display font-bold mb-4 uppercase">Web Development</h3>
+                            <ul class="space-y-3 text-sm text-white/50 font-mono">
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1 h-1 rounded-full bg-secondary"></span>Landing Pages & Portfolios</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1 h-1 rounded-full bg-secondary"></span>React & Tailwind CSS</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1 h-1 rounded-full bg-secondary"></span>JavaScript</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1 h-1 rounded-full bg-secondary"></span>Responsive UI/UX Design</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1 h-1 rounded-full bg-secondary"></span>Performance Optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Service 3: IT Support -->
+                    <div
+                        class="group p-6 md:p-8 rounded-3xl bg-surface border border-white/5 hover:border-accent/30 transition-all duration-500 relative overflow-hidden">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+                        <div class="relative z-10">
+                            <div
+                                class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform duration-500">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-display font-bold mb-4 uppercase">IT Maintenance</h3>
+                            <ul class="space-y-3 text-sm text-white/50 font-mono">
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1 h-1 rounded-full bg-accent"></span>Hardware Troubleshooting</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1 h-1 rounded-full bg-accent"></span>Software Installation</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1 h-1 rounded-full bg-accent"></span>Virus & Malware Removal</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1 h-1 rounded-full bg-accent"></span>Data Recovery & Backup</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action Arrow -->
+                <div class="flex justify-center mt-20">
+                    <a href="#contact"
+                        class="group flex flex-col items-center gap-4 opacity-50 hover:opacity-100 transition-opacity duration-500">
+                        <span
+                            class="font-mono text-[10px] tracking-[0.3em] uppercase group-hover:text-primary transition-colors">Initiate_Contact</span>
+                        <div
+                            class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center animate-bounce group-hover:border-primary/50 group-hover:text-primary transition-all">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-32 relative bg-surface/20">
+            <div class="container mx-auto px-6 max-w-4xl text-center">
+                <span class="text-primary font-mono text-xs uppercase tracking-widest mb-6 block">05_TERMINATION</span>
+                <h2 class="font-display font-black text-5xl md:text-7xl uppercase mb-12">Let's <span
+                        class="text-primary italic">Sync.</span></h2>
+
+                <div class="max-w-2xl mx-auto">
+                    <div
+                        class="bg-black/80 rounded-2xl border border-white/10 overflow-hidden shadow-2xl relative group">
+                        <!-- Terminal Header -->
+                        <div class="bg-white/5 px-6 py-3 border-b border-white/10 flex justify-between items-center">
+                            <span class="text-[10px] font-mono text-white/40 tracking-[0.2em]">SOCIAL_HUB //
+                                CHILL_MODE</span>
+                            <div class="flex gap-1.5">
+                                <div class="w-2 h-2 rounded-full bg-white/10"></div>
+                                <div class="w-2 h-2 rounded-full bg-white/10"></div>
+                                <div class="w-2 h-2 rounded-full bg-primary/40"></div>
+                            </div>
+                        </div>
+
+                        <!-- Terminal Body -->
+                        <div class="p-8 md:p-12 space-y-12">
+                            <div class="space-y-4">
+                                <p class="text-primary font-mono text-sm">> Available on your favorite platforms...</p>
+                                <p class="text-white/60 font-mono text-xs">> Connect & Strike Up a Conversation</p>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <!-- Instagram -->
+                                <a href="https://www.instagram.com/erickesaputra_/"
+                                    class="group/link flex items-center justify-between p-4 bg-white/5 border border-white/5 rounded-xl hover:border-primary/50 hover:bg-primary/5 transition-all duration-300">
+                                    <div class="flex items-center gap-4">
+                                        <div class="p-2 bg-primary/10 rounded-lg text-primary">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2">
+                                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                                            </svg>
+                                        </div>
+                                        <span class="font-display font-bold text-sm tracking-wider">INSTAGRAM</span>
+                                    </div>
+                                    <span
+                                        class="text-[10px] font-mono text-white/20 group-hover/link:text-primary/50 tracking-tighter transition-colors">@erickesaputra_</span>
+                                </a>
+
+                                <!-- GitHub -->
+                                <a href="https://github.com/erickprentinoep-lab"
+                                    class="group/link flex items-center justify-between p-4 bg-white/5 border border-white/5 rounded-xl hover:border-white/50 hover:bg-white/5 transition-all duration-300">
+                                    <div class="flex items-center gap-4">
+                                        <div class="p-2 bg-white/10 rounded-lg text-white">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2">
+                                                <path
+                                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                                            </svg>
+                                        </div>
+                                        <span class="font-display font-bold text-sm tracking-wider">GITHUB</span>
+                                    </div>
+                                    <span
+                                        class="text-[10px] font-mono text-white/20 group-hover/link:text-white/50 tracking-tighter transition-colors">/erickprentinoep-lab</span>
+                                </a>
+
+                                <!-- LinkedIn -->
+                                <a href="#"
+                                    class="group/link flex items-center justify-between p-4 bg-white/5 border border-white/5 rounded-xl hover:border-secondary/50 hover:bg-secondary/5 transition-all duration-300">
+                                    <div class="flex items-center gap-4">
+                                        <div class="p-2 bg-secondary/10 rounded-lg text-secondary">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2">
+                                                <path
+                                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                                <rect x="2" y="9" width="4" height="12" />
+                                                <circle cx="4" cy="4" r="2" />
+                                            </svg>
+                                        </div>
+                                        <span class="font-display font-bold text-sm tracking-wider">LINKEDIN</span>
+                                    </div>
+                                    <span
+                                        class="text-[10px] font-mono text-white/20 group-hover/link:text-secondary/50 tracking-tighter transition-colors"></span>
+                                </a>
+
+                                <!-- Email -->
+                                <a href="erickprentinoep@gmail.com"
+                                    class="group/link flex items-center justify-between p-4 bg-white/5 border border-white/5 rounded-xl hover:border-accent/50 hover:bg-accent/5 transition-all duration-300 min-w-0">
+                                    <div class="flex items-center gap-4 shrink-0">
+                                        <div class="p-2 bg-accent/10 rounded-lg text-accent">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2">
+                                                <path
+                                                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                                <polyline points="22,6 12,13 2,6" />
+                                            </svg>
+                                        </div>
+                                        <span class="font-display font-bold text-sm tracking-wider">E-MAIL</span>
+                                    </div>
+                                    <span
+                                        class="text-[10px] font-mono text-white/20 group-hover/link:text-accent/50 tracking-tighter transition-colors truncate ml-4 min-w-0">erickprentinoep@gmail.com</span>
+                                </a>
+
+                                <!-- TikTok -->
+                                <a href="https://www.tiktok.com/@ureyeeess" target="_blank"
+                                    class="group/link flex items-center justify-between p-4 bg-white/5 border border-white/5 rounded-xl hover:border-pink-500/50 hover:bg-pink-500/5 transition-all duration-300">
+                                    <div class="flex items-center gap-4">
+                                        <div class="p-2 bg-pink-500/10 rounded-lg text-pink-500">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+                                            </svg>
+                                        </div>
+                                        <span class="font-display font-bold text-sm tracking-wider">TIKTOK</span>
+                                    </div>
+                                    <span
+                                        class="text-[10px] font-mono text-white/20 group-hover/link:text-pink-500/50 tracking-tighter transition-colors">@ureyeeess</span>
+                                </a>
+
+                                <!-- WhatsApp -->
+                                <a href="https://wa.me/6287745734702" target="_blank"
+                                    class="group/link flex items-center justify-between p-4 bg-white/5 border border-white/5 rounded-xl hover:border-green-500/50 hover:bg-green-500/5 transition-all duration-300">
+                                    <div class="flex items-center gap-4">
+                                        <div class="p-2 bg-green-500/10 rounded-lg text-green-500">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                                <path
+                                                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                                            </svg>
+                                        </div>
+                                        <span class="font-display font-bold text-sm tracking-wider">WHATSAPP</span>
+                                    </div>
+                                    <span
+                                        class="text-[10px] font-mono text-white/20 group-hover/link:text-green-500/50 tracking-tighter transition-colors">Chat
+                                        Now</span>
+                                </a>
+                            </div>
+
+                            <div class="pt-8 border-t border-white/5 flex flex-col items-center gap-2">
+                                <span
+                                    class="text-[10px] font-mono text-white/20 uppercase tracking-[0.5em]">ALWAYS_OPEN_TO_CHAT</span>
+                                <div class="flex gap-1">
+                                    <div class="w-1.5 h-1.5 bg-primary animate-pulse"></div>
+                                    <div class="w-1.5 h-1.5 bg-primary animate-pulse delay-75"></div>
+                                    <div class="w-1.5 h-1.5 bg-primary animate-pulse delay-150"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </main>
+
+        <footer class="py-20 border-t border-white/5 bg-background overflow-hidden relative">
+            <div
+                class="absolute -bottom-48 left-1/2 -translate-x-1/2 w-full max-w-5xl h-96 bg-primary/20 blur-[120px] rounded-full">
+            </div>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-12 text-center md:text-left">
+                    <div>
+                        <a href="#"><img src="/assets/logo1.png" alt="EP-LAB Logo" class="h-24"></a>
+                        <p class="text-white/40 text-xs mt-4 mt-2 max-w-xs leading-relaxed font-mono italic">"The
+                            network is the computer, and the code is the soul."</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-12">
+                        <div class="space-y-4">
+                            <h4 class="text-[10px] font-mono text-primary uppercase tracking-widest">NAVIGATION</h4>
+                            <ul class="space-y-2 text-sm text-white/40 font-semibold uppercase tracking-wider">
+                                <li><a href="#" class="hover:text-white transition-colors">Home</a></li>
+                                <li><a href="#about" class="hover:text-white transition-colors">About</a></li>
+                                <li><a href="#projects" class="hover:text-white transition-colors">Projects</a></li>
+                            </ul>
+                        </div>
+                        <div class="space-y-4">
+                            <h4 class="text-[10px] font-mono text-primary uppercase tracking-widest">SYSTEM_STATUS</h4>
+                            <div class="flex items-center gap-2 text-[10px] font-mono text-green-500">
+                                <div class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
+                                OPERATIONAL
+                            </div>
+                            <div class="text-[10px] font-mono text-white/20">V.2.0.26_FINAL</div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-mono text-white/20 uppercase tracking-[0.2em]">
+                    <p>&copy; 2026 Erick Esa Putra. DESIGNED FOR THE FUTURE.</p>
+                    <div class="flex gap-6">
+                        <a href="#" class="hover:text-white transition-colors">PRIVACY_POLICY</a>
+                        <a href="#" class="hover:text-white transition-colors">TERMS_OF_SERVICE</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>
